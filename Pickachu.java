@@ -1,20 +1,37 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.Color;
 /**
- * Write a description of class Pickachu here.
+ * This is my class Pickachu.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Jazzdin Eulalia) 
+ * @version (October, 24, 2017)
  */
 public class Pickachu extends Creature
 {
     public Pickachu( World w )
     {
-       super(700, 2);
+       super(700, 2, "Electric");
        getImage().scale( 150, 100 );
        w.addObject( getHealthBar(), 100, 25); 
             
     }
+    
+    public void attack( int idx )
+    {
+        CreatureWorld world = (CreatureWorld)getWorld();
+        Creature enemy = world.getPlayerOne();
+        String enemyType = enemy.getType();
+        
+        if (idx == 0)
+        {
+            enemy.getHealthBar().add( -30 );
+        }
+        else
+        {
+            enemy.getHealthBar().add( -65 );
+        }
+        world.setTurnNumber(1);       
+    }    
     
     /**
      * Act - do whatever the Pickachu wants to do. This method is called whenever

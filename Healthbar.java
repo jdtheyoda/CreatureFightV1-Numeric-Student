@@ -2,10 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.*;
 
 /**
- * Write a description of class HealthBar here.
+ * This is my class HealthBar.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Jazzdin Eulalia) 
+ * @version (October, 24, 2017)
  */
 public class HealthBar extends Actor
 {

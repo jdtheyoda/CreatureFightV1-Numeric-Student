@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=SwitchCommands
+comment0.text=\r\n\ This\ is\ my\ class\ SwitchCommands.\r\n\ \r\n\ @author\ (Jazzdin\ Eulalia)\ \r\n\ @version\ (October,\ 24,\ 2017)\r\n
+comment1.params=idx\ c
+comment1.target=void\ execute(int,\ Creature)
+numComments=2

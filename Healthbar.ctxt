@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=HealthBar
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ HealthBar\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ is\ my\ class\ HealthBar.\r\n\ \r\n\ @author\ (Jazzdin\ Eulalia)\ \r\n\ @version\ (October,\ 24,\ 2017)\r\n
 comment1.params=
 comment1.target=HealthBar()
 comment1.text=\r\n\ Default\ constructor\ for\ objects\ of\ the\ HealthBar\ class\r\n\ \r\n\ @param\ There\ are\ no\ parameters\r\n\ @return\ an\ object\ of\ the\ HealthBar\ type\r\n
