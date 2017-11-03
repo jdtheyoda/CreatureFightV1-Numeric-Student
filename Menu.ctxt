@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Menu
-comment0.text=\r\n\ This\ is\ my\ class\ Menu.\r\n\ \r\n\ @author\ (Jazzdin\ Eulalia)\ \r\n\ @version\ (October,\ 24,\ 2017)\r\n
+comment0.text=\r\n\ This\ is\ my\ class\ Menu.\r\n\ \r\n\ @author\ (Jazzdin\ Eulalia)\ \r\n\ @version\ (November,\ 3,\ 2017)\r\n
 comment1.params=tb\ i\ fs\ mfg\ mbg\ sfg\ sbg\ mc
 comment1.target=Menu(java.lang.String,\ java.lang.String,\ int,\ java.awt.Color,\ java.awt.Color,\ java.awt.Color,\ java.awt.Color,\ MenuCommands)
 comment2.params=

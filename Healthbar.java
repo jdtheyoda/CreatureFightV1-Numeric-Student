@@ -5,7 +5,7 @@ import java.awt.*;
  * This is my class HealthBar.
  * 
  * @author (Jazzdin Eulalia) 
- * @version (October, 24, 2017)
+ * @version (November, 3, 2017)
  */
 public class HealthBar extends Actor
 {

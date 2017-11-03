@@ -7,19 +7,22 @@ import java.util.List;
  * This is my class MyWorld.
  * 
  * @author (Jazzdin Eulalia) 
- * @version (October, 24, 2017 )
+ * @version (Nov, 3, 2017 )
  */
 public class CreatureWorld extends World
 {
     private Creature playerOneCreature;
     private Creature playerTwoCreature;
-    private int turnNumber;
+    private boolean playerOneTurn;
     private String playerOneName;
     private String playerTwoName;
     Menu oneFightMenu;
     Menu oneSwitchMenu;
     Menu twoFightMenu;
     Menu twoSwitchMenu;
+    private boolean start;
+    private boolean playerOneMenusAdded;
+    private boolean playerTwoMenusAdded;
 
     /**
      * Default constructor for objects of class MyWorld.
@@ -31,12 +34,12 @@ public class CreatureWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(400, 400, 1); 
+        start = true;
         playerOneCreature=new Charmander(this);
         playerTwoCreature=new Pickachu(this);
         
         prepareCreatures();
         
-        turnNumber = 0;
         
         Greenfoot.start(); 
     }
@@ -57,14 +60,14 @@ public class CreatureWorld extends World
         return playerTwoCreature;
     }
     
-    public int getTurnNumber()
+    public boolean getTurnNumber()
     {
-        return turnNumber;
+        return playerOneTurn;
     }
 
-    public void setTurnNumber( int turn )
+    public void setTurnNumber( boolean turn )
     {
-        turnNumber = turn;
+        playerOneTurn = turn;
     }
 
     /**
@@ -76,32 +79,44 @@ public class CreatureWorld extends World
      */
     public void act()
     {  
-        if( turnNumber == 0 )
+        if( start == true )
         {
             playerOneName = JOptionPane.showInputDialog( "Player One, please enter your name:", null );
             playerTwoName = JOptionPane.showInputDialog( "Player Two, please enter your name:", null );
             
-            oneFightMenu = new Menu("Fight","Scratch \n Flamethrower", 24, Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, new FightCommands());
-            oneSwitchMenu = new Menu("Switch","Golem \n Ivysaur", 24, Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, new SwitchCommands());
-            addObject( oneFightMenu, 173, getHeight() - 100 );
-            addObject( oneSwitchMenu, 241, getHeight() - 100 );
-            twoFightMenu = new Menu("Fight","Tackle \n Thunderbolt", 24, Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, new FightCommands());
-            twoSwitchMenu = new Menu("Switch","Lapras \n Pidgeot", 24, Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, new SwitchCommands());
-            addObject( twoFightMenu, 131, 75 );
-            addObject( twoSwitchMenu, 199, 75 );
-            turnNumber = 1;
+            
+            
+            playerOneTurn = true;
+            start = false;
         }
-        else if(turnNumber == 1)
+        else if(playerOneTurn == true)
         {
             showText ( playerOneName + "your turn", getWidth()/2, getHeight()/2 );
             showText ( "", getWidth()/2, getHeight()/ +26 );
         }
-        else if(turnNumber == 2)
+        else
         {
             showText ( playerTwoName + "your turn", getWidth()/2, getHeight()/2 );
             showText ( "", getWidth()/2, getHeight()/ +26 );
         }
         
+        if( playerOneMenusAdded == false )
+        {
+            oneFightMenu = new Menu("Fight","Scratch \n Flamethrower", 24, Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, new FightCommands());
+            oneSwitchMenu = new Menu("Switch","Golem \n Ivysaur", 24, Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, new SwitchCommands());
+            addObject( oneFightMenu, 173, getHeight() - 100 );
+            addObject( oneSwitchMenu, 241, getHeight() - 100 );
+            playerOneMenusAdded = true;
+        }
+        
+        if( playerTwoMenusAdded == false )
+        {
+            twoFightMenu = new Menu("Fight","Tackle \n Thunderbolt", 24, Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, new FightCommands());
+            twoSwitchMenu = new Menu("Switch","Lapras \n Pidgeot", 24, Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, new SwitchCommands());
+            addObject( twoFightMenu, 131, 75 );
+            addObject( twoSwitchMenu, 199, 75 );
+            playerTwoMenusAdded = true;
+        }
         
         List allObjects= getObjects(null);
         if( playerTwoCreature.getHealthBar().getCurrent() <= 0 )
@@ -120,7 +135,18 @@ public class CreatureWorld extends World
             
         }
         
+        if( playerOneMenusAdded == false )
+        {
+            oneFightMenu = new Menu("Fight","Scratch \n Flamethrower", 24, Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, new FightCommands());
+            oneSwitchMenu = new Menu("Switch","Golem \n Ivysaur", 24, Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, new SwitchCommands());
+        }
         
+        if( playerTwoMenusAdded == false )
+        {
+            twoFightMenu = new Menu("Fight","Tackle \n Thunderbolt", 24, Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, new FightCommands());
+            twoSwitchMenu = new Menu("Switch","Lapras \n Pidgeot", 24, Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, new SwitchCommands());
+            
+        }
     }
 
     /**

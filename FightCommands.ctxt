@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=FightCommands
-comment0.text=\r\n\ This\ is\ my\ class\ FightCommands.\r\n\ \r\n\ @author\ (Jazzdin\ Eulalia)\ \r\n\ @version\ (October,\ 24,\ 2017)\r\n
+comment0.text=\r\n\ This\ is\ my\ class\ FightCommands.\r\n\ \r\n\ @author\ (Jazzdin\ Eulalia)\ \r\n\ @version\ (November,\ 3,\ 2017)\r\n
 comment1.params=idx\ c
 comment1.target=void\ execute(int,\ Creature)
 numComments=2

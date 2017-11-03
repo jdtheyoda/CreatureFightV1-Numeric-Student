@@ -3,7 +3,7 @@
  * This is my class SwitchCommands.
  * 
  * @author (Jazzdin Eulalia) 
- * @version (October, 24, 2017)
+ * @version (November, 3, 2017)
  */
 public class SwitchCommands  implements MenuCommands
 {

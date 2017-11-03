@@ -4,7 +4,7 @@ import java.awt.Color;
  * This is my class Menu.
  * 
  * @author (Jazzdin Eulalia) 
- * @version (October, 24, 2017)
+ * @version (November, 3, 2017)
  */
 public class Menu extends Actor
 { 
@@ -60,7 +60,7 @@ public class Menu extends Actor
    {
        CreatureWorld world = (CreatureWorld)getWorld();
        int distance;
-       if( world.getTurnNumber() == 1 )
+       if( world.getTurnNumber() == true )
        {
          if( titleBar.getText().equalsIgnoreCase("Fight") )
          {
@@ -75,7 +75,7 @@ public class Menu extends Actor
        {
          if( titleBar.getText().equalsIgnoreCase("Fight") )
          {
-             distance = 240;
+             distance = 270;
          }
          else
          {

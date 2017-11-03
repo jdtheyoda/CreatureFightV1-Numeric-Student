@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Charmander
-comment0.text=\r\n\ This\ is\ my\ class\ Charmander.\r\n\ \r\n\ @author\ (Jazzdin\ Eulalia)\ \r\n\ @version\ (October,\ 24,\ 2017)\r\n
+comment0.text=\r\n\ This\ is\ my\ class\ Charmander.\r\n\ \r\n\ @author\ (Jazzdin\ Eulalia)\ \r\n\ @version\ (November,\ 3,\ 2017)\r\n
 comment1.params=w
 comment1.target=Charmander(greenfoot.World)
 comment2.params=idx

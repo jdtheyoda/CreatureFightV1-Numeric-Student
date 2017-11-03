@@ -4,7 +4,7 @@ import java.awt.Color;
  * This is my class MenuCommands.
  * 
  * @author (Jazzdin Eulalia) 
- * @version (October, 24, 2017)
+ * @version (November, 3, 2017)
  */
 public interface MenuCommands  
 {
