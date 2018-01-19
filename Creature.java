@@ -39,29 +39,47 @@ public class Creature extends Actor
     {
         healthNumber = health;
         
-        playerOneCreature = true;
+        playerOneCreature = isPlayerOne;
         
         creatureBar = new HealthBar ( healthNumber, healthNumber, 10 );
         
         type = creatureType;
     }
     
+    /**
+     * getType will get type for the creatures of the CreatureWorld
+     * 
+     * @param There are no parameters
+     * @return an object of the CreatureWorld type
+     */
     public String getType() 
     {
         return type;
     }
     
+    /**
+     * getHealthBar will protect and will get the HealthBar for the creatures of the CreatureWorld
+     * 
+     * @param There are no parameters
+     * @return an object of the CreatureWorld type
+     */
     protected HealthBar getHealthBar()
     {
         return creatureBar;
     }
     
+    /**
+     * getWhetherPlayerOne gets whether player one for the creatures of the CreatureWorld
+     * 
+     * @param There are no parameters
+     * @return an object of the CreatureWorld type
+     */
     public boolean getWhetherPlayerOne()
     {
         return playerOneCreature;
     }
     
-   /**
+    /**
      * attack is the code that is run when the Creature attacks its enemy
      * 
      * @param There are no parameters
@@ -72,7 +90,7 @@ public class Creature extends Actor
         //empty method that will get overriden in subclasses
     }
 
-    /**
+     /**
      * act will complete actions that the Creature object should
      * accomplish while the scenario is running
      * 
@@ -82,6 +100,30 @@ public class Creature extends Actor
     public void act() 
     {
         //empty method that will get overriden in subclasses
-    }   
+    }
+    
+    
+    /**
+     * attack is the code that is run when the Creature attacks its enemy
+     * 
+     * @param There are no parameters
+     * @return Nothing is returned
+     */
+    public void switchCreature( int idx )
+    {
+        //empty method that will get overriden in subclasses
+    }
 
+    
+    /**
+     * attack is the code that is run when the Creature attacks its enemy
+     * 
+     * @param There are no parameters
+     * @return Nothing is returned
+     */
+    public void switchedIn()
+    {
+        //empty method that will get overriden in subclasses
+    }
+    
 }

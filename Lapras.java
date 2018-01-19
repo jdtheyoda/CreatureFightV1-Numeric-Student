@@ -2,25 +2,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Color;
 import javax.swing.JOptionPane;
 /**
- * This is my class Pickachu.
+ * This is my class Lapras.
  * 
  * @author (Jazzdin Eulalia) 
  * @version (November, 3, 2017)
  */
-public class Pickachu extends Creature
+public class Lapras extends Creature
 {
     /**
-     * Pickachu is the creatures of the CreatureWorld
+     * Lapras is the creatures of the CreatureWorld
      * 
      * @param w where the location indicates
      * @return Nothing is returned
      */
-    public Pickachu( World w )
+    public Lapras( World w )
     {
-        super(700, false, "Electric");
+        super(900, false, "Water");
         getImage().scale( 150, 100 );
         w.addObject( getHealthBar(), 100, 25); 
-            
+        getHealthBar().getImage().setTransparency(0);    
     }
     
     /**
@@ -42,21 +42,27 @@ public class Pickachu extends Creature
         }
         else
         {
-            if( enemyType.equalsIgnoreCase( "Rock" ) )
+            if( enemyType.equalsIgnoreCase( "Fire" ) )
             {
-                getWorld().showText( "It has no effect", getWorld().getWidth()/2, getWorld().getHeight()/2 +26 );
-                enemy.getHealthBar().add( -0 );
+                getWorld().showText( "It's super effective!", getWorld().getWidth()/2, getWorld().getHeight()/2 +26 );
+                enemy.getHealthBar().add( -100*2 );
                 Greenfoot.delay(30);
             }
-            else if( enemyType.equalsIgnoreCase( "Grass" ) )
+            else if( enemyType.equalsIgnoreCase( "Rock" ) )
             {
-                getWorld().showText( "It's not very effective...", getWorld().getWidth()/2, getWorld().getHeight()/2 +26 );
-                enemy.getHealthBar().add( -70/2 );
+                getWorld().showText( "It's super effective", getWorld().getWidth()/2, getWorld().getHeight()/2 +26 );
+                enemy.getHealthBar().add( -100*2 );
+                Greenfoot.delay(30);
+            }
+            else if(  enemyType.equalsIgnoreCase( "Grass" ) )
+            {
+                 getWorld().showText( "It's not very effective", getWorld().getWidth()/2, getWorld().getHeight()/2 +26 );
+                 enemy.getHealthBar().add( -100/2 );
                 Greenfoot.delay(30);
             }
             else
             {
-                enemy.getHealthBar().add( -70 );
+                enemy.getHealthBar().add( -100 );
             }
         }
         world.setTurnNumber(true);       
@@ -90,10 +96,9 @@ public class Pickachu extends Creature
     {
         CreatureWorld world = (CreatureWorld)getWorld();
         Creature switchCreature;
-        
         if( idx == 0 )
         {
-            switchCreature = world.getNewTwoCreature(1);
+            switchCreature = world.getNewTwoCreature(0);
         }
         else
         {
@@ -116,7 +121,7 @@ public class Pickachu extends Creature
             
             if( idx == 0 )
             {
-                world.changePlayerTwo("Lapras");
+                world.changePlayerTwo("Pickachu");
             }
             else
             {
@@ -147,7 +152,7 @@ public class Pickachu extends Creature
     }
     
     /**
-     * Act - do whatever the Pickachu wants to do. This method is called whenever
+     * Act - do whatever the Lapras wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
@@ -156,21 +161,21 @@ public class Pickachu extends Creature
         CreatureWorld playerWorld = (CreatureWorld)getWorld();
         if( getHealthBar().getCurrent() <= 0 )
         {
-            getWorld().showText("Pickachu has fainted...", getWorld().getWidth()/2,getWorld().getHeight()/2 + 26);
+            getWorld().showText("Lapras has fainted...", getWorld().getWidth()/2,getWorld().getHeight()/2 + 26);
             Greenfoot.delay(30);
             
-            if( playerWorld.getNewTwoCreature(1).getHealthBar().getCurrent() > 0 )
+            if( playerWorld.getNewTwoCreature(0).getHealthBar().getCurrent() > 0 )
             {
                 switchCreature(0);
                 playerWorld.setTurnNumber(false);
-                getWorld().showText( "", getWorld().getWidth()/2 , getWorld().getHeight()/2 +26 );
+                getWorld().showText( "", getWorld().getWidth()/2 , getY()/2 +26 );
                 getWorld().removeObject(this);
             }
             else if( playerWorld.getNewTwoCreature(2).getHealthBar().getCurrent() > 0 )
             {
                 switchCreature(1);
                 playerWorld.setTurnNumber(false);
-                getWorld().showText( "", getWorld().getWidth()/2 , getWorld().getHeight()/2 +26 );
+                getWorld().showText( "", getWorld().getWidth()/2 , getY()/2 +26 );
                 getWorld().removeObject(this);
             }
         }

@@ -9,6 +9,7 @@ public class SwitchCommands  implements MenuCommands
 {
     public void execute( int idx, Creature c )
     {
-        
+        System.out.println(idx);
+        c.switchCreature(idx);
     }
 }

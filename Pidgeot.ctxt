@@ -1,9 +1,9 @@
 #BlueJ class context
-comment0.target=Pickachu
-comment0.text=\r\n\ This\ is\ my\ class\ Pickachu.\r\n\ \r\n\ @author\ (Jazzdin\ Eulalia)\ \r\n\ @version\ (November,\ 3,\ 2017)\r\n
+comment0.target=Pidgeot
+comment0.text=\r\n\ This\ is\ my\ class\ Pidgeot.\r\n\ \r\n\ @author\ (Jazzdin\ Eulalia)\ \r\n\ @version\ (November,\ 3,\ 2017)\r\n
 comment1.params=w
-comment1.target=Pickachu(greenfoot.World)
-comment1.text=\r\n\ Pickachu\ is\ the\ creatures\ of\ the\ CreatureWorld\r\n\ \r\n\ @param\ w\ where\ the\ location\ indicates\r\n\ @return\ Nothing\ is\ returned\r\n
+comment1.target=Pidgeot(greenfoot.World)
+comment1.text=\r\n\ Pidgeot\ is\ the\ creatures\ of\ the\ CreatureWorld\r\n\ \r\n\ @param\ w\ where\ the\ location\ indicates\r\n\ @return\ Nothing\ is\ returned\r\n
 comment2.params=idx
 comment2.target=void\ attack(int)
 comment2.text=\r\n\ attack\ is\ the\ method\ that\ will\ attack\ other\ creatures\ of\ the\ CreatureWorld\r\n\ \r\n\ @param\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
@@ -18,5 +18,5 @@ comment5.target=void\ switchedIn()
 comment5.text=\r\n\ switchedIn\ switches\ in\ the\ creatures\ of\ the\ CreatureWorld\r\n\ \r\n\ @param\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
 comment6.params=
 comment6.target=void\ act()
-comment6.text=\r\n\ Act\ -\ do\ whatever\ the\ Pickachu\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment6.text=\r\n\ Act\ -\ do\ whatever\ the\ Pidgeot\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 numComments=7

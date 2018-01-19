@@ -29,6 +29,12 @@ public class TextBox extends Actor
         display();
     }
     
+    /**
+     * display will display the border of the CreatureWorld
+     * 
+     * @param There are no parameters
+     * @return Nothing is returned
+     */
     private void display()
     {     
         if( border == true )
@@ -40,11 +46,23 @@ public class TextBox extends Actor
         setImage( img );
     }
     
+    /**
+     * getText will get the text in the CreatureWorld
+     * 
+     * @param There are no parameters
+     * @return an object of the creature world type
+     */
     public String getText()
     {
         return text;
     }
     
+    /**
+     * setText will set the message, GreenfootImage, and the displays of the CreatureWorld
+     * 
+     * @param String message that will show the string text 
+     * @return Nothing is returned
+     */
     public void setText( String message )
     {
         text = message;
